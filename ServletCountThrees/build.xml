@@ -1,0 +1,14 @@
+<project name="ServletCount3s" default="ServletCount3s">
+	<description>
+		Read how many threes are in a binary file
+	</description>
+	<path id="servlet.path">
+		<pathelement location="/usr/share/tomcat7/lib/servlet-api.jar"/>
+	</path>
+	<target name="ServletCount3s">
+		<javac classpathref="servlet.path" srcdir="." destdir="."/>
+	</target>
+	<target name="runServletCount3s" depends="ServletCount3s">
+		<java classname="ServletCountThrees" fork="true"/>
+	</target>
+</project>

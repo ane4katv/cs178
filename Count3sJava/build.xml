@@ -1,0 +1,11 @@
+<project name="Count3s" default="Count3s">
+	<description>
+		Read how many threes are in a binary file
+	</description>
+	<target name="Count3s">
+		<javac srcdir="." destdir="."/>
+	</target>
+	<target name="runCount3s" depends="Count3s">
+		<java classname="CountThrees" fork="true"/>
+	</target>
+</project>
